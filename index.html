@@ -10,6 +10,20 @@
 	<div id="app"></div>
 	<h1 id="my-heading">Hello world!</h1>
 	<button id="my-button">Click Me</button>
+	<button id="add-data">Add Data</button>
+	<ul id="list"></ul>
+	
+	<script>
+	const button = document.getElementById('add-data');
+	const list=document.getElementById('list');
+	
+	button.addEventListener('click', function(){
+		var listItem = document.createElement('li');
+        var text = document.createTextNode('Coffee');
+        listItem.appendChild(text);
+        list.appendChild(listItem);
+	});
+	</script>
 	
 	<script>
   const button = document.getElementById('my-button');
