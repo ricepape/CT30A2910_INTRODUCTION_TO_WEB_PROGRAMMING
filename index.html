@@ -12,14 +12,16 @@
 	<button id="my-button">Click Me</button>
 	<button id="add-data">Add Data</button>
 	<ul id="list"></ul>
+	<textarea id="new_text">Add your text here</textarea>
 	
 	<script>
 	const button = document.getElementById('add-data');
 	const list=document.getElementById('list');
 	
 	button.addEventListener('click', function(){
+		applied_text=document.getElementById('new_text').value
 		var listItem = document.createElement('li');
-        var text = document.createTextNode('Coffee');
+        var text = document.createTextNode(applied_text);
         listItem.appendChild(text);
         list.appendChild(listItem);
 	});
